@@ -62,6 +62,7 @@ public class MovieAgent extends Agent {
     private ACLMessage df_subscribe_msg;
 
     // Initiator and Responder variables.
+    private String nickname;
     private DFAgentDescription df_description_service;
     private AID lastResponderAgentID;
     private ArrayList<Movie> movieList;
@@ -69,6 +70,15 @@ public class MovieAgent extends Agent {
     private Movie prop_movie;
     private IsMyZeuthen my_zeuthen;
 
+
+    public MovieAgent(String nickname) {
+        super();
+        this.nickname = nickname;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
 
     /**
      * The initiator agent subscribes to DF and waits for the DF notification when an agent register its services.
